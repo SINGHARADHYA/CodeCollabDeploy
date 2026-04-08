@@ -56,4 +56,6 @@ export function getFileIcon(filename) {
   return FILE_ICONS[ext] || FILE_ICONS.default;
 }
 
-export const API_BASE = '/api';
+export const API_BASE = import.meta.env.PROD 
+  ? 'https://code-collab-tan-five.vercel.app/api' 
+  : '/api';
