@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: codecollab-server
+    env: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node src/index.js
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
+      # The following must be set in the Render Dashboard manually to keep them secure:
+      - key: JUDGE0_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      # Assuming you have Supabase vars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
