@@ -156,8 +156,8 @@ export default function LandingPage() {
         <div className="absolute top-1/2 -right-32 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px] pointer-events-none" />
 
         {/* Hero Text Content */}
-        <div className="flex-1 text-center lg:text-left z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-300 text-sm font-medium mb-6">
+        <div className="flex-1 text-center lg:text-left z-10 animate-fade-in-slow">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-300 text-sm font-medium mb-6 animate-pulse-glow">
             <Sparkles size={14} /> The Future of Development is Collaborative
           </div>
           <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1] text-white">
@@ -276,8 +276,8 @@ export default function LandingPage() {
                     </button>
                   </div>
                   
-                  <Button type="submit" className="w-full h-12 bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-500 hover:to-blue-500 text-white font-semibold rounded-xl text-md transition-all shadow-[0_0_30px_rgba(124,58,237,0.3)] hover:shadow-[0_0_40px_rgba(124,58,237,0.5)]">
-                    Enter Workspace <ArrowRight size={18} className="ml-2" />
+                  <Button type="submit" className="w-full h-12 bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-500 hover:to-blue-500 text-white font-semibold rounded-xl text-md transition-all shadow-[0_0_30px_rgba(124,58,237,0.3)] hover:shadow-[0_0_40px_rgba(124,58,237,0.5)] group">
+                    Enter Workspace <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </form>
               )}
@@ -298,24 +298,24 @@ export default function LandingPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-zinc-900/40 border border-zinc-800/80 p-8 rounded-3xl hover:bg-zinc-900/80 transition-colors group">
-              <div className="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div className="bg-zinc-900/40 border border-zinc-800/80 p-8 rounded-3xl hover:bg-zinc-900/80 transition-colors group animate-slide-up-1">
+              <div className="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                 <Users className="text-blue-400" size={24} />
               </div>
               <h3 className="text-xl font-bold mb-3">Multiplayer Editing</h3>
               <p className="text-zinc-400 leading-relaxed text-sm">Experience Google Docs-style collaboration for code. See cursor movements, selections, and live edits in milliseconds.</p>
             </div>
 
-            <div className="bg-zinc-900/40 border border-zinc-800/80 p-8 rounded-3xl hover:bg-zinc-900/80 transition-colors group">
-              <div className="w-12 h-12 bg-violet-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div className="bg-zinc-900/40 border border-zinc-800/80 p-8 rounded-3xl hover:bg-zinc-900/80 transition-colors group animate-slide-up-2">
+              <div className="w-12 h-12 bg-violet-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-300">
                 <Shield className="text-violet-400" size={24} />
               </div>
               <h3 className="text-xl font-bold mb-3">Secure execution</h3>
               <p className="text-zinc-400 leading-relaxed text-sm">Run your code instantly in isolated sandboxes supporting over 40 programming languages without any configuration.</p>
             </div>
 
-            <div className="bg-zinc-900/40 border border-zinc-800/80 p-8 rounded-3xl hover:bg-zinc-900/80 transition-colors group">
-              <div className="w-12 h-12 bg-fuchsia-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div className="bg-zinc-900/40 border border-zinc-800/80 p-8 rounded-3xl hover:bg-zinc-900/80 transition-colors group animate-slide-up-3">
+              <div className="w-12 h-12 bg-fuchsia-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                 <Sparkles className="text-fuchsia-400" size={24} />
               </div>
               <h3 className="text-xl font-bold mb-3">AI Debugger</h3>
@@ -327,7 +327,7 @@ export default function LandingPage() {
 
       {/* Code Mockup Graphic */}
       <section className="py-24 max-w-6xl mx-auto px-6 relative z-10">
-        <div className="rounded-2xl border border-zinc-800 bg-[#161b22] shadow-2xl overflow-hidden aspect-video relative flex flex-col group">
+        <div className="rounded-2xl border border-zinc-800 bg-[#161b22] shadow-2xl overflow-hidden aspect-video relative flex flex-col group animate-float-slow">
           <div className="h-10 bg-[#0d1117] border-b border-zinc-800 flex items-center px-4 gap-2">
             <div className="flex gap-1.5">
               <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
