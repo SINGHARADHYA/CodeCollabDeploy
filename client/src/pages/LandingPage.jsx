@@ -119,7 +119,7 @@ export default function LandingPage() {
   if (authStep === 0) return null;
 
   return (
-    <div className="landing-page min-h-screen bg-[#0d1117] text-white overflow-x-hidden font-sans">
+    <div className="min-h-screen bg-[#0d1117] text-white overflow-x-hidden font-sans">
       
       {/* Top Navigation / Header */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4 backdrop-blur-md bg-[#0d1117]/70 border-b border-indigo-500/10 transition-all">
